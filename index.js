@@ -51,10 +51,43 @@ function FizzBuzz(n)
     {
        //console.log(i);
        arr.push(i);
-    }
-     
+    }    
   }
   return arr;
 }
-
 console.log(FizzBuzz(20));
+
+// In DNA strings, symbols "A" and "T" are complements of each other, as are "C" and "G". Given one side of the DNA, you need to find the complementary side.
+
+// DNAStrand("ATTGC") ==>  "TAACG"
+// DNAStrand("GTAT")  ==>  "CATA"
+function replace(str)
+{
+  var arr = str.split('')
+  for(var i=0;i<arr.length;i++)
+  {
+    switch (arr[i])
+    {
+      case 'A':
+        arr[i] = 'T'
+        break;
+        case 'T':
+        arr[i] = 'A'
+        break;
+        case 'C':
+        arr[i] = 'G'
+        break;
+        case 'G':
+        arr[i] = 'C';
+        break;
+    }  
+  }
+
+  var dna = arr.join('');
+  
+  console.log(dna);
+}
+
+replace("ATTGC")
+
+

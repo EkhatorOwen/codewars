@@ -104,3 +104,40 @@ function disemvowel(str)
 {
     return str.replace(/[aeiou]/ig,'')
 }
+
+function disemvowel(str)
+{
+    var arr = str.toLowerCase().split('');
+
+    var arrAns = str.split('');
+
+    for(let i =arr.length-1; i>0; i--)
+    {
+        switch (arr[i]) {
+
+                case 'a':   
+                arrAns.splice(i,1);
+                break;
+
+                case 'e':     
+                arrAns.splice(i,1);
+                break;
+
+                case 'i':   
+                arrAns.splice(i,1);
+                break;
+
+                case 'o':
+                arrAns.splice(i,1);
+                break;
+                case 'u':
+      
+                arrAns.splice(i,1);
+                break;
+        
+            default:
+                break;
+        }
+    }
+    return arrAns.join('');
+}

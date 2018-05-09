@@ -179,3 +179,24 @@ function printer_error(str){
 }
 
 printer_error('aaaxbbbbyyhwawiwjjjwwm');
+
+// write a function that translates english to pig-latin
+// 'truck' would be 'rucktay'
+// 'igloo' would be 'iglooway'
+
+function translate(str){
+
+  let vowels = ['a','e','i','o','u'];
+  let arr = str.split('');
+
+      if(!vowels.includes(arr[0]))
+      {
+          arr.push(arr[0],'a','y')
+          arr.splice(0,1);    
+      }
+      else{
+          arr.push('a','y');
+      }
+      let result = arr.join('');
+      console.log(result);
+}

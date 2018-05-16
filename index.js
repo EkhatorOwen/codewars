@@ -256,3 +256,25 @@ let value = str.match(/[aeiou]/ig)
 return value===null ? 'null' : value
 
 }
+
+// Write a function to square every digit of an integer.
+
+// For example: 
+// squareEveryNum(9119) ==> 811181
+// squareEveryNum(4232) ==> 16494
+
+// Note: The function should accept an integer and return an integer
+
+function squareEveryNum(num){
+
+    arr = num.toString().split('')
+    let result = []
+  
+    for(let i=0;i<arr.length;i++){
+        result.push(Math.pow(Number.parseInt(arr[i],10),2))
+    }
+
+    return Number.parseInt(result.join(''))
+}
+
+console.log(squareEveryNum(4232))

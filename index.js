@@ -476,3 +476,36 @@ function userPosts(arr, user) {
 // };
 
 userPosts(posts, "slogesdale9");
+// Write a function called validParentheses that takes a string of parentheses, and determines if the order of the parentheses is valid. validParentheses should return true if the string is valid, and false if it's invalid.
+
+// Examples: 
+// validParentheses( "()" ) => returns true 
+// validParentheses( ")(()))" ) => returns false 
+// validParentheses( "(" ) => returns false 
+// validParentheses( "(())((()())())" ) => returns true 
+
+// All input strings will be nonempty, and will only consist of open parentheses '(' and/or closed parentheses ')'
+
+function validParenthesesTest(parant){
+  return (parant.split("(").length-1) === ((parant.split(")").length-1))
+ 
+}
+// function validParenthesis(str){
+
+//   let arr = str.split('');
+//   let count = 0;
+//   let count2 = 0;
+
+//   for(let i = 0;i<arr.length; i++){
+//       if(arr[i]==')'){
+//           count++
+//           console.log(count)
+//       }else{
+//           count2++
+//           console.log(count2)  
+//       }
+//   }
+
+//  return count ==count2
+// }
+

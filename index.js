@@ -525,3 +525,29 @@ function validParenthesesTest(parant){
   }
   
   console.log(findNextSquare(121))
+
+//   There is an array with some numbers. All numbers are equal except for one. Try to find it!
+
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// It’s guaranteed that array contains more than 3 numbers.
+
+function uniq(arr){
+  var last = arr.length-1;
+      for(let i =0; i<arr.length; i++){
+          if(arr[0]==arr[1]){
+              if(arr[0]!=arr[i]){
+                  return arr[i]
+              }
+          }
+          else{
+              if(arr[last]==arr[last-1]){
+                  if(arr[last]!=arr[i]){
+                      return arr[i]
+                  }
+              }
+          }
+  
+      }
+      
+  }

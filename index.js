@@ -554,20 +554,16 @@ function uniq(arr){
 
   //given a multidimentional array, write a function that takes in an array and returns the sume of the averages
   //of those array 
-
+  //let arr= [[1,2,3,4],[1,2,3]]
   function average(arr){
+    let sum = 0
+    let total =0
     for ( let i=0; i<arr.length;i++ ){
-
-  
       for(let j=0; j<arr[i].length;j++ ){
-        
         sum = sum + arr[i][j];
       }
-     
        total = sum / arr[i].length + total;
-    
        sum =0;
     }
         return total;
-    
   }

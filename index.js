@@ -567,3 +567,16 @@ function uniq(arr){
     }
         return total;
   }
+
+  //write a function that takes an array and returns the element in the array that appears an odd number of times
+  function findOdd(arr) {
+    //happy coding!
+  
+  for(let i=0;i<arr.length;i++){
+  
+    if(arr.filter(element=>element==arr[i]).length%2!=0){
+      return arr[i]
+    }
+  
+  }
+  }

@@ -598,3 +598,10 @@ function sortArray(array) {
     }
   })
 }
+//find the largeset and smallest numbers a given array
+function minmax(arr){
+  let min = Math.min(...arr)
+  let max = Math.max(...arr)
+  
+  return `max is ${max} and min is ${min}`
+}

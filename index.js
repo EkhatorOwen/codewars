@@ -605,3 +605,23 @@ function minmax(arr){
   
   return `max is ${max} and min is ${min}`
 }
+
+// Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+var moveZeros = function (arr) {
+  // TODO: Program me
+  let newArr = []
+  
+ arr.forEach((element,index,arr)=>{
+        if(element!==0) {
+          newArr.push(element)
+    
+        }
+  })
+
+    for(let i=0;i<arr.filter(element=>element===0).length;i++){
+      newArr.push(0)
+    }
+ 
+  return newArr;
+}

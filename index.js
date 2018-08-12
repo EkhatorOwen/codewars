@@ -629,15 +629,22 @@ var moveZeros = function (arr) {
 // Write an algorithm that will identify valid IPv4 addresses in dot-decimal format. 
 // IPs should be considered valid if they consist of four octets, with values between 0..255 (included).
 const isValid=(str)=>{
-  console.log(str.split('.').length)
+
   let ans = true ;
+
   let arr = str.split('.')
   if(arr.length!==4){
    ans = false;
   }
   arr.forEach(element=>{
-    if(+element>255 || element.split('')[0]==0){
+  
+   
+    if(+element>255 || element.match(/\D/g)){
       ans = false;
+    }
+
+    if(element.split('')[0]==0 && element.length>1 ){
+      ans = false
     }
 
   })

@@ -650,3 +650,24 @@ const isValid=(str)=>{
   })
    return ans; 
 }
+
+//flatten an array
+
+let arr = [1,[1,2,3],[1,2,[1,2,3]],2]
+
+function flatten(arr){
+
+  const flatArr = []
+  
+  arr.forEach(element=>{
+   if (Array.isArray(element)){
+      flatArr.push(...flatten(element))
+   } else{
+     flatArr.push(element)
+   }
+  })
+
+  return flatArr
+  
+  
+}

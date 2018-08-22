@@ -681,5 +681,8 @@ function difference(arr){
     if(arr[i]>min){
       min = arr[i]
     }
+
   }
+
+  return diff;
 }

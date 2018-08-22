@@ -668,6 +668,18 @@ function flatten(arr){
   })
 
   return flatArr
-  
-  
+}
+
+//Maximum difference between two elements such that larger element appears after the smaller number
+function difference(arr){
+  let diff = arr[1] - arr[0];
+  let min = arr[0];
+  for(let i = 1; i< arr.length; i++){
+    if(arr[i]-min > diff){
+      diff = arr[i] - min 
+    }
+    if(arr[i]>min){
+      min = arr[i]
+    }
+  }
 }

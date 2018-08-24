@@ -689,6 +689,25 @@ function difference(arr){
 
 //bubble sort
 
+function swap(arr, i, j){
+ let temp = arr[i];
+ arr[i] = arr[j];
+ arr[j] = temp;
+}
+
+function bubble(arr){
+  for(let i = 0; i< arr.length; i++){
+    for(let j = 0; j<arr.length; j++){
+      if(arr[j-1] > arr[j]){
+        swap(arr, j -1, j)
+      }
+    }
+  }
+
+  return arr;
+}
+
+
 //format a string
 // Given: an array containing hashes of names
 
@@ -701,7 +720,6 @@ function difference(arr){
 
 function list(names){
   //your code here
- 
  let res = names.reduce((acc,curr,index,arr)=>{
    if(index===0){
       return curr.name

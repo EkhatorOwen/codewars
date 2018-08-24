@@ -686,3 +686,34 @@ function difference(arr){
 
   return diff;
 }
+
+//bubble sort
+
+//format a string
+// Given: an array containing hashes of names
+
+// Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.
+
+// Example:
+
+// list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])
+//  returns 'Bart, Lisa & Maggie'
+
+function list(names){
+  //your code here
+ 
+ let res = names.reduce((acc,curr,index,arr)=>{
+   if(index===0){
+      return curr.name
+   } 
+   else if( index ===arr.length-1){
+     return acc + ' & ' + curr.name
+   } 
+   else {
+
+     return acc  + ', '  + curr.name 
+   }
+  },'')
+
+  return res;
+}

@@ -735,3 +735,21 @@ function list(names){
 
   return res;
 }
+
+// Write a function named firstNonRepeatingLetter† that takes a string input, and returns the first character that is not repeated anywhere in the string.
+
+// For example, if given the input 'stress', the function should return 't', since the letter t only occurs once in the string, and occurs first in the string.
+
+function nonRepeat(str){
+  let orgArr = s.split('');
+  let arr = str.toLowerCase().split('');
+
+  let newArr = [];
+
+  for(let i=0; i< arr.length; i++){
+    if(arr.indexOf(arr[i])===arr.lastIndexOf(arr[i])){
+      return orgArr[i]
+    }
+  }
+  return '';
+}

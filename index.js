@@ -753,3 +753,38 @@ function nonRepeat(str){
   }
   return '';
 }
+
+// An Arithmetic Progression is defined as one in which there is a constant difference between the consecutive terms of a given series of numbers.
+//  You are provided with consecutive elements of an Arithmetic Progression. 
+//  There is however one hitch: exactly one term from the original series is missing from the set of numbers which have been given to you. 
+//  The rest of the given series is the same as the original AP. Find the missing term.
+
+function findMissing(arr){
+  let diff1 = arr[1] - arr[0];
+  let diff2 = arr[2] - arr[1];
+  if(arr[1]<=0){
+    if(diff1 > diff2){
+      diff = diff1
+    } else{
+      diff = diff2;
+    }
+
+  } else {
+  if(diff1 > diff2){
+    diff = diff2
+  } else{
+    diff = diff1;
+  } 
+}
+  //console.log(diff)
+  let num = arr[0];
+
+  for(let i =0; i<arr.length; i++){ 
+   // console.log(num)
+    if(num !== arr[i]){
+        return num
+    }
+    num+=diff;
+  }
+
+}

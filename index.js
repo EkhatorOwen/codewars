@@ -763,18 +763,22 @@ function findMissing(arr){
   let diff1 = arr[1] - arr[0];
   let diff2 = arr[2] - arr[1];
   if(arr[1]<=0){
-    if(diff1 > diff2){
-      diff = diff1
-    } else{
-      diff = diff2;
-    }
+    // if(diff1 > diff2){
+    //   diff = diff1
+    // } else{
+    //   diff = diff2;
+    // }
+
+    diff1 > diff2 ? diff= diff1 : diff = diff2
 
   } else {
-  if(diff1 > diff2){
-    diff = diff2
-  } else{
-    diff = diff1;
-  } 
+  // if(diff1 > diff2){
+  //   diff = diff2
+  // } else{
+  //   diff = diff1;
+  // } 
+
+  diff1 > diff2 ? diff = diff2 : diff = diff1;
 }
   //console.log(diff)
   let num = arr[0];

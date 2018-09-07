@@ -769,7 +769,7 @@ function findMissing(arr){
     //   diff = diff2;
     // }
 
-    diff1 > diff2 ? diff= diff1 : diff = diff2
+    diff = diff1 > diff2 ? diff1 :  diff2
 
   } else {
   // if(diff1 > diff2){
@@ -778,7 +778,7 @@ function findMissing(arr){
   //   diff = diff1;
   // } 
 
-  diff1 > diff2 ? diff = diff2 : diff = diff1;
+  diff =   diff1 > diff2 ? diff2 : diff1;
 }
   //console.log(diff)
   let num = arr[0];

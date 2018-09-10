@@ -792,3 +792,31 @@ function findMissing(arr){
   }
 
 }
+
+/*Given the triangle of consecutive odd numbers:
+rowSumOddNumbers(1); // 1
+rowSumOddNumbers(2); // 3 + 5 = 8
+             1
+          3     5
+       7     9    11
+   13    15    17    19
+21    23    25    27    29 */
+
+function rowSumOddNumbers(n) {
+	// TODO
+  let ini = 1;
+  let sum = 0;
+  for(let i=0; i<=n; i++){
+    for(let j=0;j<i; j++){
+         // console.log(i)
+         if(i==n){
+          // console.log(ini)
+           sum = sum + ini
+         }
+        //  console.log(ini)
+         ini = ini + 2;
+    }
+  }
+  return sum;
+}
+//return Math.pow(n, 3);

@@ -820,3 +820,10 @@ function rowSumOddNumbers(n) {
   return sum;
 }
 //return Math.pow(n, 3);
+
+/* 
+Given a string str, reverse it omitting all non-alphabetic characters.
+*/
+function reverseLetter(str){
+  return  str.match(/[a-zA-Z]/gm).reverse().join('')
+  }

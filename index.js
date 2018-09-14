@@ -783,7 +783,7 @@ function findMissing(arr){
   //console.log(diff)
   let num = arr[0];
 
-  for(let i =0; i<arr.length; i++){ 
+  for(let i = 0; i<arr.length; i++){ 
    // console.log(num)
     if(num !== arr[i]){
         return num
@@ -809,7 +809,7 @@ function rowSumOddNumbers(n) {
   for(let i=0; i<=n; i++){
     for(let j=0;j<i; j++){
          // console.log(i)
-         if(i==n){
+         if(i===n){
           // console.log(ini)
            sum = sum + ini
          }
@@ -822,6 +822,7 @@ function rowSumOddNumbers(n) {
 //return Math.pow(n, 3);
 
 /* 
+
 Given a string str, reverse it omitting all non-alphabetic characters.
 */
 function reverseLetter(str){

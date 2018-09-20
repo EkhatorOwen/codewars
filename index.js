@@ -847,3 +847,20 @@ function lovefunc(flower1, flower2){
   return true
  
 }
+
+/* imed Reading is an educational tool used in many schools to improve and advance reading skills. 
+A young elementary student has just finished his very first timed reading exercise.
+Unfortunately he's not a very good reader yet, so whenever he encountered a word longer than maxLength, he simply skipped it and read on.*/
+function timedReading(maxLength, text) {
+  //coding and coding..
+  let newArr = text.match(/\w+/ig)
+  
+  let count = 0;
+ 
+    newArr && newArr.forEach(element=>{
+    if(maxLength>=element.length){
+      count++
+    }
+  })
+  return count
+}

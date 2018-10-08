@@ -920,3 +920,22 @@ function checkDuplicates(arr){
   }
   return arr.length === newArr.length
 }
+
+// Return an array consisting of the largest number from each provided sub-array.
+//  For simplicity, the provided array will contain exactly 4 sub-arrays
+function largestOfFour(arr) {
+  // You can do this!
+  let max = arr[0][0];
+  let ans = [];
+
+  for(let i=0; i<arr.length;i++){
+    for(let j=0; j<arr[i].length;j++){
+      if(arr[i][j]>max){
+        max = arr[i][j]
+      } 
+    }
+      ans.push(max)
+      max=0
+  }
+  return ans;
+}

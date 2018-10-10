@@ -929,13 +929,14 @@ function largestOfFour(arr) {
   let ans = [];
 
   for(let i=0; i<arr.length;i++){
+    max=arr[i][0]
     for(let j=0; j<arr[i].length;j++){
       if(arr[i][j]>max){
         max = arr[i][j]
       } 
     }
-      ans.push(max)
-      max=0
+    ans.push(max)
   }
   return ans;
 }
+

@@ -955,3 +955,20 @@ This challenge can be solved with the .endsWith() method, which was introduced i
  }
  
  confirmEnding("Bastian", "n");
+
+//  Repeat a given string str (first argument) for num times (second argument).
+//   Return an empty string if num is not a positive number.
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  // let arr = str.split('')
+  let newStr = ''
+  if(num<0){
+    return ''
+  }
+  for(let i=0;i<num;i++){
+    newStr = newStr + str
+  }
+  return newStr;
+}
+
+repeatStringNumTimes("abc", 3);

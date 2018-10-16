@@ -1037,3 +1037,16 @@ function frankenSplice(arr1, arr2, n) {
   }
   return localArray;
 }
+
+//Remove all falsy values from an array.
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  let newArr = []
+  for(let i=0;i<arr.length; i++){
+  
+    if(arr[i]){
+      newArr.push(arr[i])
+    }
+  }
+  return newArr;
+}

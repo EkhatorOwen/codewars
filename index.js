@@ -1005,3 +1005,14 @@ if(typeof bool==="boolean"){
 }
 
 booWho(true);
+//Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+function titleCase(str) {
+  //console.log(str.split(' '))
+  let arr = str.split(' ');
+  let newArr = [];
+  arr.forEach(element=>{
+      newArr.push(element.charAt().toUpperCase() + element.substring(1).toLowerCase())
+  })
+  return newArr.join(' ');
+}

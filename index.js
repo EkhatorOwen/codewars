@@ -1016,3 +1016,24 @@ function titleCase(str) {
   })
   return newArr.join(' ');
 }
+//Use the array methods slice and splice to copy each element of the first array into the second array, in order.
+
+// function frankenSplice(arr1, arr2, n) {
+//   // It's alive. It's alive!
+//   let localArray = arr2.slice();
+//   for (let i = 0; i < arr1.length; i++) {
+//     localArray.splice(n, 0, arr1[i]);
+//     n++;
+//   }
+//   return localArray;
+// }
+
+function frankenSplice(arr1, arr2, n) {
+  // It's alive. It's alive!
+  let localArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    localArray.splice(n, 0, arr1[i]);
+    n++;
+  }
+  return localArray;
+}

@@ -1050,3 +1050,26 @@ function bouncer(arr) {
   }
   return newArr;
 }
+
+//Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted.
+// The returned value should be a number.
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+
+ let newArr = arr.sort((a,b)=>{
+   return a>b
+ })
+  for(let i =0; i< newArr.length; i++){
+   
+    if(newArr[i]==num){
+      return i;
+  } else if(num>newArr[i] && num<newArr[i+1]){
+    
+    return i+1
+  } else if(num>newArr[newArr.length-1]){
+    return newArr.length 
+  } 
+
+}
+  return 0;
+}

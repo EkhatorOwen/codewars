@@ -1073,3 +1073,17 @@ function getIndexToIns(arr, num) {
 }
   return 0;
 }
+
+//Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
+function mutation(arr) {
+  let word = arr[0].toLowerCase();
+
+ let target = arr[1].toLowerCase().split('');
+ let count = 0;
+ for(let i=0; i<target.length; i++){
+   if(word.includes(target[i])){
+     count++
+   }
+ }
+ return count == target.length
+}

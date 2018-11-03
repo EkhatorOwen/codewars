@@ -1114,3 +1114,22 @@ function diffArray(arr1, arr2) {
   })
   return newArr;
 }
+
+//You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+function destroyer(arr,...args) {
+  console.log(args)
+  // Remove all the values
+  // let newArr = [];
+  // var args = Array.prototype.slice.call(arguments)
+  // let arr1 = args.shift();
+  // let arr2 = args;
+  // //console.log(args.shift())
+  // //console.log(arr1)
+  // for(let i=0; i<arr1.length; i++){
+  //     if(!newArr.includes(arr1[i])){
+
+  //     }
+
+  // }
+  return arr.filter(ele=>!args.includes(ele));
+}

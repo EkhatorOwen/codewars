@@ -1133,3 +1133,21 @@ function destroyer(arr,...args) {
   // }
   return arr.filter(ele=>!args.includes(ele));
 }
+
+// Make a function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument).
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  let keys = Object.keys(source);
+  
+  return collection.filter(elem=>{
+    for(let i=0;i<keys.length; i++){
+     
+      if(!elem.hasOwnProperty(keys[i])||elem[keys[i]]!==source[keys[i]]){
+          return false
+      }
+    }
+    return true;
+  })
+}

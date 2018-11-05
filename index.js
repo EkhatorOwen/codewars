@@ -1151,3 +1151,18 @@ function whatIsInAName(collection, source) {
     return true;
   })
 }
+//Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+
+function spinalCase(str) {
+  // "It's such a fine line between stupid, and clever."
+  // --David St. Hubbins
+  let small = str.toLowerCase();
+  //console.log(small);
+  let arr = small.replace(/[^a-z]/gm,'-')
+ // let arr = small.split(' ');
+
+  //console.log(arr)
+  return str.replace(/([a-z])([A-Z])/gm,'$1 $2').toLowerCase().replace(/[^a-z]/gm,'-');
+}
+

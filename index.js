@@ -177,7 +177,8 @@ function translate(str) {
     arr.push('a', 'y');
   }
   let result = arr.join('');
-  console.log(result);
+  return result;
+  
 }
 
 // Write a function called songDecoder that removes the terrible dubstep sounds from a song, to reveal the original, pure, un-dubstepped beauty.
@@ -1165,4 +1166,33 @@ function spinalCase(str) {
   //console.log(arr)
   return str.replace(/([a-z])([A-Z])/gm,'$1 $2').toLowerCase().replace(/[^a-z]/gm,'-');
 }
+
+//piglatin
+function translatePigLatin(str) {
+  var strArr = [];
+  var tmpChar;
+
+  // check if the char is consonant using RegEx
+  function isConsonant(char) {
+      return !/[aeiou]/.test(char);
+  }
+
+  // return initial str + "way" if it starts with vowel
+  // if not - convert str to array
+  if (!isConsonant(str.charAt(0)))
+      return str + "way";
+  else
+      strArr = str.split("");
+
+  // push all consonats to the end of the array
+  while (isConsonant(strArr[0])) {
+      tmpChar = strArr.shift();
+      strArr.push(tmpChar);
+  }
+// convert array to string and concatenate "ay" at the end  
+return strArr.join("")+"ay";
+}
+
+// test here
+translatePigLatin("consonant");
 

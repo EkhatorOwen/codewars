@@ -1196,3 +1196,29 @@ return strArr.join("")+"ay";
 // test here
 translatePigLatin("consonant");
 
+
+function myReplace(str, before, after) {
+  let replace;
+
+  let arr = str.split(' ');
+  let arr2 = arr.slice()
+  let index= arr.indexOf(before);
+ 
+  let num = arr.splice(index,1,after).join()
+
+  //Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+  
+  let res = num.match(/[A-Z]/g)
+  if(res!==null){
+    replace = after.split('')[0].toUpperCase() + after.substring(1)
+    console.log(replace)
+  } else{
+    replace = after.split('')[0].toLowerCase() + after.substring(1)
+  }
+  let ans = arr2.splice(index,1,replace).join()
+
+  //console.log(arr2)
+  return arr2.join(' ');
+}
+
+

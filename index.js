@@ -1222,3 +1222,43 @@ function myReplace(str, before, after) {
 }
 
 
+//The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+//Base pairs are a pair of AT and CG. Match the missing element to the provided character.
+//Return the provided character as the first element in each array.
+function pairElement(str) {
+  let arr = str.split('');
+  let newArr = [];
+  let tempArr = [];
+  for(let i=0;i<arr.length; i++){
+    //console.log(arr[i])
+     switch(arr[i]){
+      case 'A':
+      tempArr.push('A')
+      tempArr.push('T')
+      newArr.push(tempArr)
+      tempArr = [];
+      break
+      case 'T':
+      tempArr.push('T')
+      tempArr.push('A')
+      newArr.push(tempArr)
+      tempArr = [];
+      break
+      case 'C':
+      tempArr.push('C')
+      tempArr.push('G')
+      newArr.push(tempArr)
+      tempArr = [];
+      break
+      case 'G':
+      tempArr.push('G')
+      tempArr.push('C')
+      newArr.push(tempArr)
+      tempArr = [];
+      break
+    }
+  }//console.log(newArr)
+  return newArr;
+}
+
+pairElement("GCG");

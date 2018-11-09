@@ -1262,3 +1262,26 @@ function pairElement(str) {
 }
 
 pairElement("GCG");
+
+//Find the missing letter in the passed letter range and return it.
+
+function fearNotLetter(str) {
+
+  let alph = 'abcdefghijklmnopqrstuvwxyz';
+  let arr = alph.split('');
+  let newArr = str.split('');
+  let a = newArr[0];
+  let index = arr.indexOf(a);
+
+  for(let i=0;i<newArr.length;i++){
+
+      if(arr[index]!==newArr[i]){
+          return arr[index]
+      } 
+      index++
+  }
+ 
+   return undefined
+    
+  
+}

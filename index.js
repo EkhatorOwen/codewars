@@ -1218,7 +1218,7 @@ function myReplace(str, before, after) {
   let ans = arr2.splice(index,1,replace).join()
 
   //console.log(arr2)
-  return arr2.join(' ');
+  return arr2.join(' '); 
 }
 
 

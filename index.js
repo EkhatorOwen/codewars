@@ -1302,3 +1302,20 @@ function uniteUnique(...arr) {
   }
   return newArr
 }
+//merge two words together letter by letter. then add what is left to the end of the merged string.
+function merge(a,b){
+  let arr1 = a;
+  let arr2 = b;
+  let arr3 = [];
+  
+  for(let i=0;i<arr1.length;i++){
+     arr3.push(arr1[i]);
+     arr3.push(arr2[i])
+  }
+  
+  let index = a.length;
+
+  let str = b.substring(index)
+  
+  return arr3.join('') + str
+}

@@ -1319,3 +1319,27 @@ function merge(a,b){
   
   return arr3.join('') + str
 }
+
+//Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
+function convertHTML(str) {
+  
+  let obj = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&apos;'
+  }
+
+  let replace;
+  let dict = ['&', '<', '>', '"', "'"]
+  let arr = str.split('');
+ 
+  for(let i=0;i<arr.length;i++){
+    if(dict.includes(arr[i])){
+      replace = obj[arr[i]]
+      arr.splice(i,1,replace)
+    }
+  }
+  return arr.join('');
+}

@@ -1343,3 +1343,39 @@ function convertHTML(str) {
   }
   return arr.join('');
 }
+
+/*Write a function:
+that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
+*/
+function solution(A) {
+  // write your code in JavaScript (Node.js 8.9.4)
+  let large = A[0];
+  let small = A[0];
+  let ans;
+  for(let i=0;i<A.length;i++){
+    if(large<A[i]){
+      large=A[i]
+    }
+    if(small>A[i]){
+      small=A[i]
+    }
+  }
+
+  for(let i=small;i<large;i++){
+    console.log(i)
+    if(!A.includes(i)){
+      ans = i;
+      if(ans<0){
+        return 1
+      }
+      return ans
+    }
+  }
+
+  if(large<0){
+    return 1
+  } 
+
+    return ++large ;
+  
+}

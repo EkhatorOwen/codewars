@@ -1457,5 +1457,4 @@ function smallestCommons(arr) {
   return quot;
 }
 
-// test here
 smallestCommons([1,5]);

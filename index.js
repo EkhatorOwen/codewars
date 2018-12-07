@@ -204,7 +204,7 @@ function songDecoder(str) {
 
 function count(str) {
 
-  var volwel = ['a', 'e', 'i', 'o', 'u']
+  var vowel = ['a', 'e', 'i', 'o', 'u']
   var arr = str.toLowerCase().split('');
   let count = 0;
   for (let i = 0; i < arr.length; i++) {

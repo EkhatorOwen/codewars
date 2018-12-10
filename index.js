@@ -1458,3 +1458,20 @@ function smallestCommons(arr) {
 }
 
 smallestCommons([1,5]);
+/* 
+Given the array arr, iterate through and remove each element starting from the first element (the 0 index) until the function func returns true when the iterated element is passed through it.
+dropElements([1, 2, 3], function(n) {return n < 3; });
+*/
+
+function dropElements(arr, func) {
+  // Drop them elements.
+  
+  for(let i=0;i<arr.length;i++){
+    let ans = func(arr[i]);
+    if(ans===true){
+      console.log(i)
+      return arr.slice(i)
+    } 
+  }
+  return []
+}

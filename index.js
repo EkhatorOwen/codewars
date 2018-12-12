@@ -1475,3 +1475,20 @@ function dropElements(arr, func) {
   }
   return []
 }
+
+//Flatten a nested array. You must account for varying levels of nesting.
+function steamrollArray(arr) {
+  // I'm a steamroller, baby
+  let flatArray = [];
+  arr.forEach(elem=>{
+    if(Array.isArray(elem)){
+     
+      flatArray.push(...steamrollArray(elem))
+    } else {
+      flatArray.push(elem)
+    }
+  })
+
+  return flatArray
+}
+

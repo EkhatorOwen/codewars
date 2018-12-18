@@ -1511,3 +1511,24 @@ function binaryAgent(str) {
 
 console.log(binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"))
 
+//Check if the predicate (second argument) is truthy on all elements of a collection (first argument).
+
+function truthCheck(collection, pre) {
+  // Is everyone being true?
+  let ans = false
+  
+  for(let i=0;i<collection.length;i++){
+   // console.log(collection[i]["sex"]);
+    if(collection[i][pre]){
+      ans= true
+    } else {
+      ans = false
+    } 
+    if(ans ==false){
+      return false
+    }
+    //console.log(ans)
+    
+  }
+  return ans;
+}

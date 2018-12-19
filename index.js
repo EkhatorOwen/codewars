@@ -1527,7 +1527,7 @@ function truthCheck(collection, pre) {
     if(ans ==false){
       return false
     }
-    //console.log(ans)
+    
     
   }
   return ans;

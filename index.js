@@ -1532,3 +1532,22 @@ function truthCheck(collection, pre) {
   }
   return ans;
 }
+
+//Create a function that sums two arguments together. If only one argument is provided, then return a function that expects one argument and returns the sum.
+
+function addTogether(...args) {
+ 
+  if(typeof args[0]!=="number" || args[1] && typeof args[1]!=="number"){
+    return undefined
+  }
+  let x = args[0]
+  if (args.length == 1){
+    return (y) =>{
+      if(typeof y !=="number") return undefined
+      return x + y;
+    }
+  } 
+
+    return args[0] + args[1]
+
+}

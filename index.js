@@ -1551,3 +1551,35 @@ function addTogether(...args) {
     return args[0] + args[1]
 
 }
+
+//Fill in the object constructor with the following methods below:
+
+
+
+var Person = function(firstAndLast) {
+  // Complete the method below and implement the others similarly
+  //  this.firstname = first
+  this.getFullName = function() {
+    return firstAndLast;
+  }
+  this.setFullName = function(firstAndLast){
+    this.firstAndLast = firstAndLast;
+  }
+
+  this.getFirstName = function () {
+    return firstname;
+  }
+
+  this.getLastName = function () {
+    return firstname;
+  }
+
+  this.setFirstName = function (first) {
+    this.firstname = first;
+  }
+
+  this.setLastName = function(last) {
+    this.lastname = last;
+  }
+
+};

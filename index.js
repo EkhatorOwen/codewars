@@ -1558,28 +1558,32 @@ function addTogether(...args) {
 
 var Person = function(firstAndLast) {
   // Complete the method below and implement the others similarly
-  //  this.firstname = first
+    // this.firstname = "Bob";
+    // this.lastname = "Ross";
+    let fullname =  firstAndLast;
+  
   this.getFullName = function() {
-    return firstAndLast;
+    return fullname;
   }
-  this.setFullName = function(firstAndLast){
-    this.firstAndLast = firstAndLast;
+
+  this.setFullName = function(name){
+    fullname = name;
   }
 
   this.getFirstName = function () {
-    return firstname;
+    return fullname.split(' ')[0];
   }
 
   this.getLastName = function () {
-    return firstname;
+    return fullname.split(' ')[1];
   }
 
-  this.setFirstName = function (first) {
-    this.firstname = first;
+  this.setFirstName = function (name) {
+    fullname = name + " " +fullname.split(' ')[1];
   }
 
-  this.setLastName = function(last) {
-    this.lastname = last;
+  this.setLastName = function(name) {
+    fullname =   fullname.split(' ')[0] + " " + name;
   }
 
-};
+}

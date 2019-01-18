@@ -1612,3 +1612,27 @@ function orbitalPeriod(arr) {
 
 // test here
 orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+
+/*
+Return true if the given string is a palindrome. Otherwise, return false.
+
+A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.
+
+Note
+You'll need to remove all non-alphanumeric characters (punctuation, spaces and symbols) and turn everything into the same case (lower or upper case) in order to check for palindromes.
+
+*/
+function palindrome(str) {
+  // Good luck!
+   let newStr = str.match(/[A-Za-z]/gi).join('').toLowerCase()
+  let arr = newStr.split('')
+
+  let newArr = []
+   for(let i=arr.length-1;i>=0;i--){
+    
+     newArr.push(arr[i])
+   }
+
+ 
+  return newStr === newArr.join('')
+}

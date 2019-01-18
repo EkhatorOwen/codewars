@@ -1624,7 +1624,7 @@ You'll need to remove all non-alphanumeric characters (punctuation, spaces and s
 */
 function palindrome(str) {
   // Good luck!
-   let newStr = str.match(/[A-Za-z]/gi).join('').toLowerCase()
+   let newStr = str.match(/[0-9A-Za-z]/gi).join('').toLowerCase()
   let arr = newStr.split('')
 
   let newArr = []

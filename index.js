@@ -1624,7 +1624,7 @@ You'll need to remove all non-alphanumeric characters (punctuation, spaces and s
 */
 function palindrome(str) {
   // Good luck!
-   let newStr = str.match(/[0-9A-Za-z]/gi).join('').toLowerCase()
+   let newStr = str.match(/[0-9  A-Za-z]/gi).join('').toLowerCase()
   let arr = newStr.split('')
 
   let newArr = []
@@ -1636,3 +1636,5 @@ function palindrome(str) {
  
   return newStr === newArr.join('')
 }
+
+//Convert the given number into a roman numeral.

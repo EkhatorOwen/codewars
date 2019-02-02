@@ -1638,3 +1638,43 @@ function palindrome(str) {
 }
 
 //Convert the given number into a roman numeral.
+
+
+
+function convert(val){
+
+  let obj = {
+
+    0: '',
+   1 : 'i',
+   5: 'v',
+   10: 'x',
+   50: 'l',
+  100: 'c',
+  500: 'd',
+  1000: 'm' }
+
+  //console.log(obj[val])
+
+
+  if(obj[val]){
+   return obj[val]
+  }
+
+  let arr = val.toString().split('').map(Number)
+
+  let len = arr.length;
+  console.log(len)
+  for(let i=0; i<arr.length;i++){
+    
+
+  }
+
+
+
+
+}
+
+
+
+console.log(convert(1001))

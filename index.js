@@ -1640,41 +1640,49 @@ function palindrome(str) {
 //Convert the given number into a roman numeral.
 
 
-
-function convert(val){
-
-  let obj = {
-
-    0: '',
-   1 : 'i',
-   5: 'v',
-   10: 'x',
-   50: 'l',
-  100: 'c',
-  500: 'd',
-  1000: 'm' }
-
-  //console.log(obj[val])
-
-
-  if(obj[val]){
-   return obj[val]
-  }
-
-  let arr = val.toString().split('').map(Number)
-
-  let len = arr.length;
-  console.log(len)
-  for(let i=0; i<arr.length;i++){
-    
-
-  }
-
-
-
-
-}
-
-
-
-console.log(convert(1001))
+function convertToRoman(num) {
+  var romans = ["I", "V", "X", "L", "C", "D", "M"],
+      ints = [],
+      romanNumber = [],
+      numeral = "";
+   while (num) {
+     ints.push(num % 10);
+     num = Math.floor(num/10);
+   }
+   for (i=0; i<ints.length; i++){
+       units(ints[i]);
+   }
+   function units(){
+     numeral = romans[i*2];
+     switch(ints[i]) {
+       case 1:
+         romanNumber.push(numeral);
+         break;
+       case 2:
+         romanNumber.push(numeral.concat(numeral));
+         break;
+       case 3:
+         romanNumber.push(numeral.concat(numeral).concat(numeral));
+         break;
+       case 4:
+         romanNumber.push(numeral.concat(romans[(i*2)+1]));
+         break;
+       case 5:
+         romanNumber.push(romans[(i*2)+1]);
+         break;
+       case 6:
+         romanNumber.push(romans[(i*2)+1].concat(numeral));
+         break;
+       case 7:
+         romanNumber.push(romans[(i*2)+1].concat(numeral).concat(numeral));
+         break;
+       case 8:
+         romanNumber.push(romans[(i*2)+1].concat(numeral).concat(numeral).concat(numeral));
+         break;
+       case 9:
+         romanNumber.push(romans[i*2].concat(romans[(i*2)+2]));
+       }
+     }
+   return romanNumber.reverse().join("").toString();
+ }
+ 

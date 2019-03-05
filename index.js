@@ -1685,4 +1685,40 @@ function convertToRoman(num) {
      }
    return romanNumber.reverse().join("").toString();
  }
+
+
+ //Is the string uppercase?
+
+ String.prototype.isUpperCase = function () {
+  // console.log(this.toString())
+   let c = this.toString()
+   let ans
+   if(c.length===0) return true
+ 
+ 
+   //let arr = c.split(' ').join('').split('');
+ 
+   let arr = (c.split(' ').join('').match(/[a-zA-Z]/gm))
+   
+   for(let i=0; i<arr.length; i++){
+    
+     if(arr[i].match(/[A-Z]/g)) {
+       ans = true
+       
+     } else {
+       ans = false
+     }
+ 
+     if(ans == false && !c.match(/[a-zA-Z]/gm)){
+       return true
+     }
+ 
+     if (ans==false){
+       return false
+     }
+   }
+  // let res = num.match(/[A-Z]/g)
+  // return ans;
+  return true
+ }
  

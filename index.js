@@ -1734,4 +1734,18 @@ To add more secrecy, you are to accept a second optional parameter, telling you 
 To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional parameter, you replace "a" with "h", "b" with "g" etc. .
  
   */
+
+
+//Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+
+ function sumMix(arr){
+  let sum = 0;
+  for(let i=0; i<arr.length; i++){
+    sum+= Number(arr[i])
+  }
+  return sum
+}
+
+sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0'])
  

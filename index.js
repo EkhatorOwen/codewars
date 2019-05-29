@@ -1735,6 +1735,36 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
  
   */
 
+ function mirror(code){
+  let alp = [ 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  let str = arguments[0];
+  let str2 = arguments[1];
+  let temp = []
+  let res = str.toLowerCase().split('');
+  
+  if(str2===undefined){
+    for(let i=0;i<res.length;i++){
+      if(alp[25-alp.indexOf(res[i])]==undefined){
+        temp.push(' ')
+      } else{
+      temp.push(alp[25-alp.indexOf(res[i])])
+    }
+      }
+      return temp.join('')
+    }
+      temp = []
+     let arr = str2.toLowerCase().split('')
+     for(let i=0; i<res.length; i++){
+       if(arr[(arr.length-1)-arr.indexOf(res[i])]==undefined){ 
+         temp.push(res[i])
+       } else {
+         temp.push(arr[(arr.length-1)-arr.indexOf(res[i])])
+       }
+     }
+     return temp.join('')
+}
+
+
 
 //Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 

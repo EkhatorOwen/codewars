@@ -1744,9 +1744,14 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
   
   if(str2===undefined){
     for(let i=0;i<res.length;i++){
-      if(alp[25-alp.indexOf(res[i])]==undefined){
+      if(alp[25-alp.indexOf(res[i])]==undefined && res[i]==' '){
         temp.push(' ')
-      } else{
+      }
+        else if(alp[25-alp.indexOf(res[i])]==undefined && !res[i]==''){
+          temp.push(res[i])
+        }
+      
+      else{
       temp.push(alp[25-alp.indexOf(res[i])])
     }
       }
@@ -1760,8 +1765,8 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
        } else {
          temp.push(arr[(arr.length-1)-arr.indexOf(res[i])])
        }
-     }
-     return temp.join('')
+      }
+      return temp.join('')
 }
 
 

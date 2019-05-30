@@ -1744,13 +1744,9 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
   
   if(str2===undefined){
     for(let i=0;i<res.length;i++){
-      if(alp[25-alp.indexOf(res[i])]==undefined && res[i]==' '){
-        temp.push(' ')
+      if(alp[25-alp.indexOf(res[i])]==undefined ){
+        temp.push(res[i])
       }
-        else if(alp[25-alp.indexOf(res[i])]==undefined && !res[i]==''){
-          temp.push(res[i])
-        }
-      
       else{
       temp.push(alp[25-alp.indexOf(res[i])])
     }

@@ -1753,7 +1753,7 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
       }
       return temp.join('')
     }
-      temp = []
+      temp = [];
      let arr = str2.toLowerCase().split('')
      for(let i=0; i<res.length; i++){
        if(arr[(arr.length-1)-arr.indexOf(res[i])]==undefined){ 

@@ -1735,7 +1735,7 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
  
   */
 
- function mirror(code){
+ function mirror(){
   let alp = [ 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
   let str = arguments[0];
   let str2 = arguments[1];

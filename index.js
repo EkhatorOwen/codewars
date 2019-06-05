@@ -1773,7 +1773,8 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
  function sumMix(arr){
   let sum = 0;
   for(let i=0; i<arr.length; i++){
-    sum+= Number(arr[i])
+    //sum+= Number(arr[i])
+    sum+= +arr[i]
   }
   return sum
 }

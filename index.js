@@ -1780,4 +1780,32 @@ To make it a bit more clear: e.g. in case of "abcdefgh" as the second optional p
 }
 
 sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0'])
+
+/* Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.
+
+Sort the elements of arr1 such that the relative ordering of items in arr1 are the same as in arr2.  Elements that don't appear in arr2 should be placed at the end of arr1 in ascending order. */ 
+
+var relativeSortArray = function(arr1, arr2) {
+  let newArr = [];
+let notFound = [];
+for(let i=0; i<arr2.length; i++){
+  for(let j=0; j<arr1.length; j++){
+      if((arr2[i]===arr1[j])){
+      //    console.log(arr1[j])
+          newArr.push(arr1[j])
+       } 
+       // console.log(arr1.indexOf(arr2[i])==-1)        
+  }
+  
+}
+
+for (let j=0;j<arr1.length;j++){
+   if(arr2.indexOf(arr1[j])===-1){
+     notFound.push(arr1[j])
+   }
+}
  
+ notFound.sort((a,b)=>a-b)
+
+return [...newArr,...notFound]
+};

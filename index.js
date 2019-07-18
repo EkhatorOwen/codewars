@@ -1809,3 +1809,32 @@ for (let j=0;j<arr1.length;j++){
 
 return [...newArr,...notFound]
 };
+/*  Greatest Common Divisor of Strings
+Example 1:
+
+Input: str1 = "ABCABC", str2 = "ABC"
+Output: "ABC"
+Example 2:
+
+Input: str1 = "ABABAB", str2 = "ABAB"
+Output: "AB"
+Example 3:
+
+Input: str1 = "LEET", str2 = "CODE"
+Output: 
+*/
+
+var gcdOfStrings = function(str1, str2) {
+  let arr1 = str1.split('')
+  let arr2 = str2.split('')
+
+  let ansArr = []
+  
+  for(let i=0; i<arr2.length; i++){
+      if(arr2[i]===arr1[i] && !ansArr.includes(arr1[i])){
+          ansArr.push(arr1[i]);
+      }
+  }
+
+  return ansArr.join('')
+};

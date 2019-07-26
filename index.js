@@ -1859,3 +1859,18 @@ Given an array of integers, return indices of the two numbers such that they add
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
  */
+var twoSum = function(nums, target) {
+  let obj = {};
+  let arr = []
+    for(let i =0; i<nums.length; i++){
+     // console.log(target-nums[i]) 
+       if(!obj[nums[i]]){
+         // console.log(target - nums[i])
+          obj[target-nums[i]] = nums[i]
+          //  console.log(obj)
+       } else{
+        
+       return  [nums.indexOf(obj[nums[i]]),nums.indexOf(nums[i])]
+       } 
+    }
+};
